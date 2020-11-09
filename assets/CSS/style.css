@@ -3,3 +3,14 @@
 .jumbotron {
     background-color: lightseagreen;
 }
+
+.card1,
+.card2,
+.card3,
+.card4 {
+    width: 400px;
+    background-color: paleturquoise;
+    border: 8px;
+    border-style: groove;
+    border-color: skyblue;
+}

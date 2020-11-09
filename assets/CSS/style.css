@@ -1,5 +1,4 @@
 
-
 .jumbotron {
     background-color: lightseagreen;
 }
@@ -8,9 +7,17 @@
 .card2,
 .card3,
 .card4 {
-    width: 400px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
     background-color: paleturquoise;
     border: 8px;
     border-style: groove;
     border-color: skyblue;
+    margin: 15px;
+    position: relative;
+}
+
+.card-title {
+    font-weight: bolder;
 }

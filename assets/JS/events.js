@@ -2,7 +2,7 @@
 
 // 1. create query to search 
 
-function searchArtist() {
+function searchArtist(artistName) {
     var queryURL = "https://rest.bandsintown.com/v4/artists/" + artistName + "/?app_id=f7b296adcd087f892a1993c5ddba60ef";
 
     $.ajax({
@@ -15,6 +15,14 @@ function searchArtist() {
 };
 
 // 2. search artist by name
+
+$("#searchBtn").on("click", function(event) {
+    event.preventDefault();
+
+    var inputArtist = $("#searchArtistName").val().trim();
+
+    searchArtist(inputArtist);
+}) 
 
 
 

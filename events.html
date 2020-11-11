@@ -8,9 +8,11 @@
   <meta name="Description" content="Enter your description here" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/events.css">
   <title>Events</title>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <!-- NavBar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="index.html">Home</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,15 +29,51 @@
         <li class="nav-item">
             <a class="nav-link" href="instruments.html">Instruments</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="media.html">Media Player</a>
-        </li>
       </ul>
     </div>
   </nav>
 </head>
 
 <body>
+
+  <div class="container">
+    
+    <div class="row" style="margin-top: 5%;">
+      <div class="col-12">
+        <!-- Search Button -->
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" id="searchArtistName" placeholder="Enter Artist's Name..." aria-label="search" aria-describedby="button-addon2">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="searchBtn">Search</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top: 5%;">
+      <div class="col-12">
+        <!-- Artist Results -->
+        <div class="card bg-dark text-white">
+          <img src="http://placehold.jp/a3c2e0/003366/1500x500.png" class="card-img" alt="...">
+          <div class="card-img-overlay">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text">Last updated 3 mins ago</p>
+          </div>
+        </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+
+
+
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>

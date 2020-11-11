@@ -8,3 +8,4 @@
 
 <!-- Events Page -->
 * Created search button and input field 
+* Created function to query the bandsintown api for the searched artist

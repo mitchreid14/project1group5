@@ -21,20 +21,14 @@ function showData(data) {
             .map(
                 song => `<li>
       <span><strong>${song.artist.name}</strong> - ${song.title}</span>
-      <button class="btn" data-artist="${song.artist.name}" data-songtitle="${song.title}">Get Lyrics</button>
+      <div>
+      <button class="btn" id="GLbutton" data-artist="${song.artist.name}" data-songtitle="${song.title}">Get Lyrics</button>
+      </div>
     </li>`
             )
             .join('')}
     </ul>
 `;
-}
-
-// Get prev and next songs
-async function getMoreSongs(url) {
-    const res = await fetch(`https://cors-anywhere.herokuapp.com/${url}`);
-    const data = await res.json();
-
-    showData(data);
 }
 
 // Get lyrics for song

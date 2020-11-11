@@ -64,12 +64,15 @@ form {
     max-width: 100%;
 }
 
-form input {
+#artist,
+#title {
     border: 0;
     border-radius: 50px;
     font-size: 16px;
     padding: 15px 30px;
-    width: 100%;
+    width: 500px;
+    max-width: 100%;
+    margin: 10px;
 }
 
 form button {

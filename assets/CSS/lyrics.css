@@ -9,16 +9,16 @@ body {
     background-image: url(https://c.wallhere.com/photos/b5/e1/1920x1200_px_abstract_Andy_Gilmore_circle_geometry_Graphic_Design_pattern-777832.jpg!d);
 }
 
-button {
+#button {
     cursor: pointer;
 }
 
-button:active {
+#button:active {
     transform: scale(.95);
 }
 
 input:focus,
-button:focus {
+#button:focus {
     outline: none;
 }
 
@@ -75,17 +75,7 @@ form {
     margin: 10px;
 }
 
-form button {
-    position: absolute;
-    top: 2px;
-    right: 2px;
-    background-color: teal;
-    border: 0;
-    border-radius: 50px;
-    color: powderblue;
-    font-size: 16px;
-    padding: 13px 30px;
-}
+
 
 .btn {
     background-color: teal;
@@ -135,6 +125,7 @@ ul.songs li {
     font-weight: bolder;
     color: darkcyan;
     background-color: skyblue;
+    text-align: center;
 }
 
 #h1 {

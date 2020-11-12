@@ -142,3 +142,7 @@ ul.songs li {
     font-size: 70px;
     text-decoration: underline;
 }
+
+#LS-Logo {
+    max-width: 350px;
+}

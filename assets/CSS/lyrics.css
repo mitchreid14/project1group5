@@ -113,13 +113,6 @@ ul.songs li {
     width: 500px;
 }
 
-.container h2 {
-    font-weight: 300;
-}
-
-.container p {
-    text-align: center;
-}
 
 .centered {
     display: flex;
@@ -144,7 +137,12 @@ ul.songs li {
     background-color: skyblue;
 }
 
-#GLbutton {
-    background-color: teal;
-    color: powderblue;
+#h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 70px;
+    text-decoration: underline;
+}
+
+#LS-Logo {
+    max-width: 350px;
 }

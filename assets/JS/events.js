@@ -1,13 +1,11 @@
 //variables
 
-// 1. search artist by name
+//search artist by name
 
 $("#searchBtn").on("click", function(event) {
     event.preventDefault();
 
     var artistName = $("#searchArtistName").val().trim();
-
-    //searchArtist(artistName);
 
     var queryURL = "http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=" + artistName + "&api_key=65ef463da86ddbf2f244742a378779b4&format=json";
 
@@ -19,7 +17,7 @@ $("#searchBtn").on("click", function(event) {
 
 })
 
-// 2. function showReuslts to list out the suggested results for the name the user input
+//function showReuslts to list out the suggested results for the name the user input
 
 function showResults (results) {
 
@@ -30,12 +28,6 @@ function showResults (results) {
     for ( i = 0; i < 10; i++) {
 
         var listArtists = $('<li class="artist-list list-group-item">');
-
-        listArtists.on('click', function(e) {
-
-            showEvents(searchedArtists[i]);
-
-        }) 
         
         listArtists.text(searchedArtists[i].name);
         
@@ -45,25 +37,48 @@ function showResults (results) {
         
     }
 
+    $(".artist-list").on('click', function(e) {
+
+        showEvents($(this).text());
+
+    }) 
+
 }
 
 function showEvents(artistName) {
-    var queryURL2 = "https://rest.bandsintown.com/v4/artists/" + artistName + "/?app_id=f7b296adcd087f892a1993c5ddba60ef";
+    var queryURL2 = "https://rest.bandsintown.com/v4/artists/" + artistName + "/events/?app_id=f7b296adcd087f892a1993c5ddba60ef";
+
+    console.log(queryURL2);
 
     $.ajax({
         url: queryURL2,
         method: "GET"
     }).then(function(data) {
         console.log(data);
+        $(".list-group").empty();
+        displayEvents(data);
     })
-
 };
 
- 
+function displayEvents(artistInfo){
 
-// 3. retrieve search results of artists
+    for ( i = 0; i < 20; i++) {
 
-// 4. add event listener to choose the artist
+        var listVenues = $('<li class="venue-list list-group-item">');
+        
+        listVenues.text(artistInfo[i].venue.location);
+         
+        $(".list-group").append(listVenues);
+     
+    }
 
-// 5. display events information
+    $(".artist-list").on('click', function(e) {
+
+     
+
+    })
+
+
+}
+
 

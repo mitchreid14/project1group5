@@ -23,34 +23,41 @@ $("#searchBtn").on("click", function(event) {
 
 function showResults (results) {
 
-    var searchedArtist = results.results.artistmatches.artist;
+    var searchedArtists = results.results.artistmatches.artist;
 
-    console.log(searchedArtist);
+    console.log(searchedArtists);
 
-    for ( i = 0; i < searchedArtist.length; i++) {
+    for ( i = 0; i < 10; i++) {
 
-        var listArtists = searchedArtist[i].name;
+        var listArtists = $('<li class="artist-list list-group-item">');
 
-        $(listArtists).append(".artist-list");
+        listArtists.on('click', function(e) {
+
+            showEvents(searchedArtists[i]);
+
+        }) 
+        
+        listArtists.text(searchedArtists[i].name);
+        
+        
+        $(".list-group").append(listArtists);
 
         
     }
 
 }
 
+function showEvents(artistName) {
+    var queryURL2 = "https://rest.bandsintown.com/v4/artists/" + artistName + "/?app_id=f7b296adcd087f892a1993c5ddba60ef";
 
+    $.ajax({
+        url: queryURL2,
+        method: "GET"
+    }).then(function(data) {
+        console.log(data);
+    })
 
-// function showEvents(artistName) {
-//     var queryURL = "https://rest.bandsintown.com/v4/artists/" + artistName + "/?app_id=f7b296adcd087f892a1993c5ddba60ef";
-
-//     $.ajax({
-//         url: queryURL,
-//         method: "GET"
-//     }).then(function(data) {
-//         console.log(data);
-//     })
-
-// };
+};
 
  
 

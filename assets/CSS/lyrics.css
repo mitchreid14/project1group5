@@ -64,12 +64,15 @@ form {
     max-width: 100%;
 }
 
-form input {
+#artist,
+#title {
     border: 0;
     border-radius: 50px;
     font-size: 16px;
     padding: 15px 30px;
-    width: 100%;
+    width: 500px;
+    max-width: 100%;
+    margin: 10px;
 }
 
 form button {
@@ -110,13 +113,6 @@ ul.songs li {
     width: 500px;
 }
 
-.container h2 {
-    font-weight: 300;
-}
-
-.container p {
-    text-align: center;
-}
 
 .centered {
     display: flex;
@@ -141,7 +137,8 @@ ul.songs li {
     background-color: skyblue;
 }
 
-#GLbutton {
-    background-color: teal;
-    color: powderblue;
+#h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 70px;
+    text-decoration: underline;
 }

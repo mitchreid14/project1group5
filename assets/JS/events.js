@@ -62,21 +62,28 @@ function showEvents(artistName) {
 
 function displayEvents(artistInfo){
 
-    for ( i = 0; i < 20; i++) {
+    var artistImgURL = artistInfo[0].artist.image_url;
 
-        var listVenues = $('<li class="venue-list list-group-item">');
+    var image = $('<img src="" class="img-fluid" alt="Responsive image">')
+    
+    image.attr("src", artistImgURL);
+
+    $(".container2").append(image);
+    
+
+
+
+    // for ( i = 0; i < 20; i++) {
+
+    //     var listVenues = $('<li class="venue-list list-group-item">');
         
-        listVenues.text(artistInfo[i].venue.location);
+    //     listVenues.text(artistInfo[i]);
          
-        $(".list-group").append(listVenues);
+    //     $(".list-group").append(listVenues);
      
-    }
+    // }
 
-    $(".artist-list").on('click', function(e) {
 
-     
-
-    })
 
 
 }

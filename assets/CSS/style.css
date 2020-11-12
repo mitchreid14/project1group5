@@ -48,3 +48,7 @@ body {
     width: 270px;
     height: 200px;
 }
+
+.lead {
+    margin: 10px;
+}

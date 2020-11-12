@@ -83,6 +83,20 @@ function displayEvents(artistInfo){
 
     $(".container2").append(image);
 
+    //upcoming events
+
+    var eventCount = artistInfo.upcoming_event_count;
+
+    var concerts = $('<h3>');
+
+    concerts.text("Upcoming Events: " + eventCount);
+
+    $(".container2").append(concerts);
+
+    //if upcoming events !== 0, then create a new ajax call for events
+
+
+
 
     
 

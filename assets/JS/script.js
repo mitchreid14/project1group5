@@ -1,1 +1,0 @@
-var queryURL = "https://musicbrainz.org/ws/2/."

@@ -6,5 +6,3 @@ function findLyrics() {
         document.getElementById("result").innerHTML = data.lyrics.replace(new RegExp("\n", "g"), "<br>")
       })
   }
-
-  

@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
 
-  <link rel="stylesheet" href="assets/CSS/instruments.css">
+  <link rel="stylesheet" href="assets/CSS/songCharts.css">
 
   <title>Instruments</title>
 </head>
@@ -31,7 +31,7 @@
             <a class="nav-link" href="events.html">Events</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="instruments.html">Instruments</a>
+            <a class="nav-link" href="songCharts.html">Song Charts</a>
         </li>
       </ul>
     </div>
@@ -39,8 +39,8 @@
 
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1 class="display-4">Chord Finder</h1>
-      <p class="lead">Enter the song you want to play</p>
+      <h1 class="display-4">Artist's Top Songs</h1>
+      <p class="lead"></p>
     </div>
   </div>
 
@@ -49,11 +49,14 @@
     <div class="row" style="margin-top: 5%;">
       <div class="col-12">
         <!-- Search Button -->
-        <div class="input-group mb-3">
-          <input type="text" class="form-control" id="searchArtist" placeholder="Enter Song or Artist..." aria-label="search" aria-describedby="button-addon2">
+        <div class="input-group mb-3 form-width">
+          <input type="text" class="form-control" id="searchArtist" placeholder="Enter Artist..." aria-label="search" aria-describedby="button-addon2">
           <div class="input-group-append">
             <button class="btn btn-outline-secondary" type="button" id="searchBtn">Search</button>
           </div>
+        </div>
+        <div id="titles">
+          
         </div>
       </div>
     </div>

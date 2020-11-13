@@ -18,6 +18,10 @@ function searchArtist() {
     
     $.ajax(settings).done(function (response) {
         console.log(response);
+    for (var i=0; i < response.response.hits.length; i++) {
+        console.log(response.response.hits[i].result.title);
+        $("#titles").append(response.response.hits[i].result.title);  
+    }
     });
 }
 

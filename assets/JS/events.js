@@ -106,12 +106,6 @@ function displayInfo(artistInfo){
 
     } else {
 
-        var concerts = $('<h3>');
-
-        concerts.text("Upcoming Events: " + eventCount);
-
-        $("#info").append(concerts);
-
         listEvents(artistHeading);
         
 };
@@ -124,13 +118,13 @@ function listEvents () {
         url: queryURL3,
         method: "GET"
     }).then(function(events) {
-    console.log(events);
-
-    var listVenues = $('<li class="venue-list">'); 
+    console.log(events); 
 
     for ( i = 0; i < events.length; i++) {
 
-        listVenues.text(events[i].venue.location);
+        var listVenues = $('<li class="venue-list">');
+
+        listVenues.text(events[i].venue.location + ": " + events[i].datetime.slice(10));
 
         console.log(listVenues);
         

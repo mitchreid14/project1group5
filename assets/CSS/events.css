@@ -24,10 +24,34 @@ body {
 }
 
 h1 {
-    color: teal;
+    color: whitesmoke;
     text-align: center;
     background-color: orange;
-    float: top;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+}
+
+#name {
+    width: 100%;
+}
+
+#info {
+    background-color: orange;
+    height: max-content;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    margin-top: 5%;
+    color: whitesmoke;
+}
+
+img {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
 
 }
 

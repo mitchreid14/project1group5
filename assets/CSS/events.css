@@ -27,4 +27,7 @@ h1 {
     color: teal;
     text-align: center;
     background-color: orange;
+    float: top;
+
 }
+

@@ -32,7 +32,7 @@ function showResults (results) {
         listArtists.text(searchedArtists[i].name);
         
         
-        $(".list-group").append(listArtists);
+        $("#nameList").append(listArtists);
 
         
     }
@@ -58,11 +58,11 @@ function showEvents(artistName) {
     }).then(function(data) {
         console.log(data);
         $(".list-group").empty();
-        displayEvents(data);
+        displayInfo(data);
     })
 };
 
-function displayEvents(artistInfo){
+function displayInfo(artistInfo){
 
     //add artist name
     var artistHeading = artistInfo.name;
@@ -108,7 +108,7 @@ function displayEvents(artistInfo){
 
         $("#info").append(concerts);
         
-        var listEvents = function(e) {
+        var listEvents = function(a) {
         
         var queryURL3 = "https://rest.bandsintown.com/v4/artists/" + artistHeading + "/events/?app_id=f7b296adcd087f892a1993c5ddba60ef";
         
@@ -117,15 +117,16 @@ function displayEvents(artistInfo){
             method: "GET"
         }).then(function(events) {
         console.log(events);
-        displayEvents(events);
 
-        var listVenues = $('<li class="venue-list list-group-item">');
+        var listVenues = $('<li class="venue-list list-group-item">'); 
 
-        for ( i = 0; i < listVenues.length; i++) {
+        for ( i = 0; i < events.length; i++) {
+
+            listVenues.text(events[i].venue.location);
+
+            console.log(listVenues);
             
-            listVenues.text(artistInfo[i]);
-            
-            $(".list-group").append(listVenues);
+            $("#locationList").append(listVenues);
         }
         });
     };

@@ -22,3 +22,9 @@ body {
 .artist-list {
     background-color: skyblue;
 }
+
+h1 {
+    color: teal;
+    text-align: center;
+    background-color: orange;
+}

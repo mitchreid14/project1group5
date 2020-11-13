@@ -16,9 +16,6 @@ $("#searchBtn").on("click", function(event) {
 
     $("#nameList").empty();
 
-    $(".container2").empty();
-
-
 })
 
 //function showReuslts to list out the suggested results for the name the user input
@@ -52,6 +49,7 @@ function showResults (results) {
 }
 
 function showEvents(artistName) {
+
     var queryURL2 = "https://rest.bandsintown.com/v4/artists/" + artistName + "/?app_id=f7b296adcd087f892a1993c5ddba60ef";
 
     console.log(queryURL2);
@@ -68,6 +66,7 @@ function showEvents(artistName) {
 
 function displayInfo(artistInfo){
 
+    $(".container").slideUp();
 
     //add artist name
     var artistHeading = artistInfo.name;

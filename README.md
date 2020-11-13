@@ -24,4 +24,5 @@ Lyrics Page
 * added title image
 * created function to query lyric api to output results
 * added background
+* somewhat heavily styled with CSS
 

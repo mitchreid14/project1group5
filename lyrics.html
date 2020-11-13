@@ -36,27 +36,34 @@
   <header>
       <img src="assets/images/LS-Logo.png" id="LS-Logo" alt="LS-Logo">
 
-      <input type="text" id="title" placeholder="Enter full song title..." />
-      <input type="text" id="artist" placeholder="Enter full artist/band name..." />
+    <input type="text" id="title" placeholder="Enter song title..." />
+    <input type="text" id="artist" placeholder="Enter artist name..." />
 
-      <button id="button" class="btn" onclick="findLyrics()">Get Lyrics!</button>
-      
+    <button id="button" class="btn" onclick="findLyrics()">Get Lyrics!</button>
+
   </header>
 
-      <div id="result" class="container">
-        <p>Results</p>
-      </div>
+  <div id="result" class="container">
+    <p>Results</p>
+  </div>
 
 
 
   <!-- Media Player Here -->
- 
+  <div class="container">
+    <div class="row" style="display: none;">
+      <iframe src='about:blank'>"frameborder="0"></iframe>
+    </div>
+
+
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="assets/JS/lyrics.js"></script>
+
   <script src="assets/JS/player.js"></script>
 </body>
 

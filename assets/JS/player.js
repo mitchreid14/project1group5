@@ -1,9 +1,8 @@
 $(document).ready(function () {
             console.log('ready!')
-            var APIKey = config.GoogleAPIKey
 
 
-            var queryURL = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=&key=" + APIKey;"AIzaSyARmz0JqhDmVgCCye_QcvXE8D7yzm4cKvk"
+            var queryURL = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=&key=" + APIKey + "AIzaSyARmz0JqhDmVgCCye_QcvXE8D7yzm4cKvk"
 
 
             $.ajax({
@@ -23,3 +22,6 @@ $(document).ready(function () {
                     $("#display-div").html(`<a href=${youTubeVideoURL}> Youtube Link Generated form API</a>`);
                 })
             })
+
+            // to get iframe back, going to need function before this
+            // style.disply=block

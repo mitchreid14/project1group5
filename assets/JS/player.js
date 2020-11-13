@@ -1,25 +1,27 @@
-// $(document).ready(function () {
-//             console.log('ready!')
-//             var APIKey = config.GoogleAPIKey
+$(document).ready(function () {
+            console.log('ready!')
 
 
-//             var queryURL = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=&key=" + APIKey + "AIzaSyARmz0JqhDmVgCCye_QcvXE8D7yzm4cKvk"
+            var queryURL = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=&key=" + APIKey + "AIzaSyARmz0JqhDmVgCCye_QcvXE8D7yzm4cKvk"
 
 
-//             $.ajax({
-//                     url: queryURL,
-//                     method: "GET"
-//                 }).then(function (response) {
+            $.ajax({
+                    url: queryURL,
+                    method: "GET"
+                }).then(function (response) {
 
-//                     console.log(queryURL);
+                    console.log(queryURL);
 
-//                     var videoId = response.items[0].id.videoId
-//                     console.log(videoId)
+                    var videoId = response.items[0].id.videoId
+                    console.log(videoId)
 
-//                     var youTubeVideoURL = `https://www.youtube.com/watch?v=${videoId}`
+                    var youTubeVideoURL = `https://www.youtube.com/watch?v=${videoId}`
 
-//                     console.log(youTubeVideoURL)
+                    console.log(youTubeVideoURL)
 
-//                     $("#display-div").html(`<a href=${youTubeVideoURL}> Youtube Link Generated form API</a>`);
-//                 })
-//             })
+                    $("#display-div").html(`<a href=${youTubeVideoURL}> Youtube Link Generated form API</a>`);
+                })
+            })
+
+            // to get iframe back, going to need function before this
+            // style.disply=block

@@ -48,3 +48,11 @@ body {
     width: 270px;
     height: 200px;
 }
+
+.lead {
+    margin: 10px;
+}
+
+#OSM-Logo {
+    max-width: 350px;
+}

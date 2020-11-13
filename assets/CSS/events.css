@@ -18,3 +18,13 @@ body {
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
 }
+
+.artist-list {
+    background-color: skyblue;
+}
+
+h1 {
+    color: teal;
+    text-align: center;
+    background-color: orange;
+}

@@ -13,6 +13,9 @@ Events Page
 * Created and onclick event to query the bandsintown api for the selected artist
 * Created function to query the bandsintown api for the searched artist
 
+Instruments Page 
+* Added a search button and input field
+* Changed the background to match the other pages
 
 Lyrics Page
 * Created search fields for artist name and song title
@@ -21,3 +24,4 @@ Lyrics Page
 * added title image
 * created function to query lyric api to output results
 * added background
+

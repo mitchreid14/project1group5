@@ -71,7 +71,7 @@ function displayEvents(artistInfo){
 
     name.text(artistHeading);
     
-    $(".container2").append(name);
+    $("#name").append(name);
 
     //adding image to page
 
@@ -81,7 +81,7 @@ function displayEvents(artistInfo){
     
     image.attr("src", artistImgURL);
 
-    $(".container2").append(image);
+    $("#picture").append(image);
 
     //upcoming events
 
@@ -91,7 +91,7 @@ function displayEvents(artistInfo){
 
     concerts.text("Upcoming Events: " + eventCount);
 
-    $(".container2").append(concerts);
+    $("#info").append(concerts);
 
     //if upcoming events !== 0, then create a new ajax call for events
 

@@ -24,10 +24,17 @@ body {
 }
 
 h1 {
-    color: teal;
+    color: whitesmoke;
     text-align: center;
     background-color: orange;
-    float: top;
 
+}
+
+#name {
+    width: 100%;
+}
+
+#listOfLocations {
+    background-color: orange;
 }
 

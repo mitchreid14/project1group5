@@ -87,34 +87,55 @@ function displayEvents(artistInfo){
 
     var eventCount = artistInfo.upcoming_event_count;
 
-    var concerts = $('<h3>');
+    if (eventCount === 0) {
+        var h3El = $('<h3>');
 
-    concerts.text("Upcoming Events: " + eventCount);
+        h3El.text("Upcoming Events: ");
 
-    $("#info").append(concerts);
+        $("#info").append(h3El);
 
-    //if upcoming events !== 0, then create a new ajax call for events
+        var h5El = $('<h5>');
 
+        h5El.text("Sorry! No upcoming events!");
 
+        $("#info").append(h5El);
+
+    } else {
+
+        var concerts = $('<h3>');
+
+        concerts.text("Upcoming Events: " + eventCount);
+
+        $("#info").append(concerts);
+        
+        var listEvents = function(e) {
+        
+        var queryURL3 = "https://rest.bandsintown.com/v4/artists/" + artistHeading + "/events/?app_id=f7b296adcd087f892a1993c5ddba60ef";
+        
+        $.ajax({
+            url: queryURL3,
+            method: "GET"
+        }).then(function(events) {
+        console.log(events);
+        displayEvents(events);
+
+        var listVenues = $('<li class="venue-list list-group-item">');
+
+        for ( i = 0; i < listVenues.length; i++) {
+            
+            listVenues.text(artistInfo[i]);
+            
+            $(".list-group").append(listVenues);
+        }
+        });
+    };
+
+};
+};
 
 
     
 
-
-
-    // for ( i = 0; i < 20; i++) {
-
-    //     var listVenues = $('<li class="venue-list list-group-item">');
-        
-    //     listVenues.text(artistInfo[i]);
-         
-    //     $(".list-group").append(listVenues);
-     
-    // }
-
-
-
-
-}
+    
 
 

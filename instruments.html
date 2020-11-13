@@ -46,23 +46,37 @@
 
 
   <!-- SEARCH BUTTON -->
-  <section>
+  <header>
 
-    <nav class="navbar navbar-light bg-light">
+    <!-- <nav class="navbar navbar-light bg-light">
       <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <input id="song" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button id="button" class="btn btn-outline-success my-2 my-sm-0" type="button">Search</button>
       </form>
-    </nav>
+    </nav> -->
 
-  </section>
+    <div class="row" style="margin-top: 5%;">
+      <div class="col-12">
+        <!-- Search Button -->
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" id="searchSong" placeholder="Enter Song or Artist..." aria-label="search" aria-describedby="button-addon2">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="searchBtn">Search</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <div style="background-image: url('beach-2179624.jpg');"></div>
+
+  </header>
+
+  <!-- <div style="background-image: url(./assets/images/InstrumentsPagePic.jpg); height: 1000px;"></div> -->
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="assets/JS/instruments.js"></script>
 </body>
 
 </html>

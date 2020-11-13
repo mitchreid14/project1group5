@@ -9,3 +9,9 @@
 <!-- Events Page -->
 * Created search button and input field 
 * Created function to query the bandsintown api for the searched artist
+
+
+
+<!-- Instruments Page -->
+* Added a search button and input field
+* Changed the background to match the other pages

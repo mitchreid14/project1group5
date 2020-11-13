@@ -106,12 +106,6 @@ function displayInfo(artistInfo){
 
     } else {
 
-        var concerts = $('<h3>');
-
-        concerts.text("Upcoming Events: " + eventCount);
-
-        $("#info").append(concerts);
-
         listEvents(artistHeading);
         
 };

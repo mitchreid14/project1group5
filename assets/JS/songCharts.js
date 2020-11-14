@@ -1,6 +1,6 @@
 var artist;
-var query = "https://genius.p.rapidapi.com/search?q=" + artist;
-console.log(query);
+// var query = "https://genius.p.rapidapi.com/search?q=" + artist;
+// console.log(query);
 
 function searchArtist() {
     artist = $("#searchArtist").val();
@@ -20,6 +20,8 @@ function searchArtist() {
         console.log(response);
     for (var i=0; i < response.response.hits.length; i++) {
         console.log(response.response.hits[i].result.title);
+        $("p").append(response.response.hits).append(response.response.hits[i].result.title);
+        // create new element (p tag) and then append the response to p tag then append the p tag to tittles
         $("#titles").append(response.response.hits[i].result.title);  
     }
     });

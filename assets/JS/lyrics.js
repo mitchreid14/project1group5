@@ -1,13 +1,12 @@
+// starting with a function to find the lyrics
 function findLyrics() {
-
+// getting the api along with the artist name and song title from the users search
   $.get("https://api.lyrics.ovh/v1/" + document.getElementById("artist").value + "/" + document.getElementById("title").value,
     function (data) {
-
+// outputting results from lyrics searched globally. Added break for better look when displaying results
       document.getElementById("result").innerHTML = data.lyrics.replace(new RegExp("\n", "g"), "<br>")
-
     })
 }
-
 
 // var queryURL = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=&key=" + APIKey + "AIzaSyARmz0JqhDmVgCCye_QcvXE8D7yzm4cKvk"
 

@@ -19,3 +19,8 @@ body {
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
 }
+
+.form-width {
+    width: 500px;
+    margin-left: 400px;
+}

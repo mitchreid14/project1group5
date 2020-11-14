@@ -9,9 +9,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
 
-  <link rel="stylesheet" href="assets/CSS/instruments.css">
+  <link rel="stylesheet" href="assets/CSS/songCharts.css">
 
   <title>Instruments</title>
+</head>
+
+<body>
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="index.html">Home</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -27,42 +31,32 @@
             <a class="nav-link" href="events.html">Events</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="instruments.html">Instruments</a>
+            <a class="nav-link" href="songCharts.html">Song Charts</a>
         </li>
       </ul>
     </div>
   </nav>
-</head>
-
-<body>
 
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1 class="display-4">Chord Finder</h1>
-      <p class="lead">Enter the song you want to play</p>
+      <h1 class="display-4">Artist's Top Songs</h1>
+      <p class="lead"></p>
     </div>
   </div>
 
-
-
-  <!-- SEARCH BUTTON -->
   <header>
-
-    <!-- <nav class="navbar navbar-light bg-light">
-      <form class="form-inline">
-        <input id="song" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button id="button" class="btn btn-outline-success my-2 my-sm-0" type="button">Search</button>
-      </form>
-    </nav> -->
 
     <div class="row" style="margin-top: 5%;">
       <div class="col-12">
         <!-- Search Button -->
-        <div class="input-group mb-3">
-          <input type="text" class="form-control" id="searchSong" placeholder="Enter Song or Artist..." aria-label="search" aria-describedby="button-addon2">
+        <div class="input-group mb-3 form-width">
+          <input type="text" class="form-control" id="searchArtist" placeholder="Enter Artist..." aria-label="search" aria-describedby="button-addon2">
           <div class="input-group-append">
             <button class="btn btn-outline-secondary" type="button" id="searchBtn">Search</button>
           </div>
+        </div>
+        <div id="titles">
+          
         </div>
       </div>
     </div>
@@ -70,10 +64,9 @@
 
   </header>
 
-  <!-- <div style="background-image: url(./assets/images/InstrumentsPagePic.jpg); height: 1000px;"></div> -->
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="assets/JS/instruments.js"></script>

@@ -22,5 +22,19 @@ body {
 
 .form-width {
     width: 500px;
-    margin-left: 400px;
+    margin-left: 575px;
+}
+
+#result {
+    border-width: 8px;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: darkcyan;
+    text-decoration: underline;
+    text-decoration-color: powderblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    color: darkcyan;
+    background-color: black;
+    text-align: center;
 }

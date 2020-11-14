@@ -34,7 +34,7 @@
 
 <body>
   <header>
-      <img src="assets/images/LS-Logo.png" id="LS-Logo" alt="LS-Logo">
+    <img src="assets/images/LS-Logo.png" id="LS-Logo" alt="LS-Logo">
 
     <input type="text" id="title" placeholder="Enter song title..." />
     <input type="text" id="artist" placeholder="Enter artist name..." />
@@ -51,9 +51,12 @@
 
   <!-- Media Player Here -->
   <div class="container-sm">
-    <div class="row  ">
-      <div class="col-4"></div>
-      <iframe id="ytframe" src='about:blank'>"frameborder="0"></iframe>
+    <div class="row">
+      <div class="col-sm-12">
+        <div id="video">
+          <iframe id="ytframe" src='about:blank'>"frameborder="0"></iframe>
+        </div>
+      </div>
     </div>
 
 
@@ -64,7 +67,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="assets/JS/lyrics.js"></script>
-
   <script src="assets/JS/player.js"></script>
 </body>
 

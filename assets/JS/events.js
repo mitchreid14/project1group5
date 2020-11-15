@@ -3,6 +3,9 @@
 //search artist by name
 
 $("#searchBtn").on("click", function(event) {
+
+    $("#goBackBtn").show();
+
     event.preventDefault();
 
     var artistName = $("#searchArtistName").val().trim();
@@ -16,7 +19,7 @@ $("#searchBtn").on("click", function(event) {
 
     $("#nameList").empty();
 
-})
+});
 
 //function showReuslts to list out the suggested results for the name the user input
 
@@ -36,7 +39,7 @@ function showResults (results) {
         $("#nameList").append(listArtists);
 
         
-    }
+    };
 
     $(".artist-list").on('click', function(e) {
 
@@ -44,9 +47,9 @@ function showResults (results) {
 
         showEvents($(this).text());
 
-    }) 
+    }); 
 
-}
+};
 
 function showEvents(artistName) {
 
@@ -61,7 +64,7 @@ function showEvents(artistName) {
         console.log(data);
         $(".list-group").empty();
         displayInfo(data);
-    })
+    });
 };
 
 function displayInfo(artistInfo){
@@ -122,17 +125,30 @@ function listEvents () {
 
     for ( i = 0; i < events.length; i++) {
 
-        var listVenues = $('<li class="venue-list">');
+        var listVenues = $('<a href="#" class="list-group-item list-group-item-action" id="links">');
 
-        listVenues.text(events[i].venue.location + ": " + events[i].datetime.slice(10));
+        listVenues.text(events[i].venue.location + ":    " + events[i].datetime.substring(0,10));
 
         console.log(listVenues);
+
+        var eventURL = events[i].url;
+
+        $("#links").attr("src", eventURL);
         
         $("#locationList").append(listVenues);
-    }
+
+        $("#locationList").on('click', function(){
+            window.open(eventURL);
+         }); 
+            
+        }
     });
 };
 };
+
+function refresh() {
+    location.reload(true);
+}
 
 
     

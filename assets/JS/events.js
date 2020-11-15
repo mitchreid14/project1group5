@@ -10,7 +10,7 @@ $("#searchBtn").on("click", function(event) {
 
     var artistName = $("#searchArtistName").val().trim();
 
-    var queryURL = "http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=" + artistName + "&api_key=65ef463da86ddbf2f244742a378779b4&format=json";
+    var queryURL = "https://ws.audioscrobbler.com/2.0/?method=artist.search&artist=" + artistName + "&api_key=65ef463da86ddbf2f244742a378779b4&format=json";
 
     $.ajax({
         url: queryURL,

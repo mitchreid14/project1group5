@@ -39,11 +39,10 @@ h1 {
 }
 
 #info {
-    background-color: orange;
+    background-color: transparent;
     height: max-content;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
-    margin-top: 5%;
     color: whitesmoke;
 }
 
@@ -52,6 +51,26 @@ img {
     border-bottom-left-radius: 50px;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
+
+}
+
+ul {
+        list-style: none;
+        max-height: 500px;
+        margin:0;
+        overflow:auto;
+        padding:0;
+        text-indent:10px;
+
+}
+
+.list-group-item {
+    background-color: orange;
+
+}
+
+.list-group-item i:hover {
+    background-color: skyblue;
 
 }
 

@@ -122,13 +122,19 @@ function listEvents () {
 
     for ( i = 0; i < events.length; i++) {
 
-        var listVenues = $('<li class="venue-list">');
+        var listVenues = $('<a href="#" class="list-group-item list-group-item-action">');
 
-        listVenues.text(events[i].venue.location + ": " + events[i].datetime.slice(10));
+        listVenues.text(events[i].venue.location + ":    " + events[i].datetime.substring(0,10));
 
         console.log(listVenues);
+
+        //var eventURL = events[i].url;
+
+        //listVenues.attr("#"=eventURL);
         
         $("#locationList").append(listVenues);
+
+        
     }
     });
 };

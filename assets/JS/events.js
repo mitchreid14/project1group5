@@ -3,6 +3,9 @@
 //search artist by name
 
 $("#searchBtn").on("click", function(event) {
+
+    $("#goBackBtn").show();
+
     event.preventDefault();
 
     var artistName = $("#searchArtistName").val().trim();
@@ -16,7 +19,7 @@ $("#searchBtn").on("click", function(event) {
 
     $("#nameList").empty();
 
-})
+});
 
 //function showReuslts to list out the suggested results for the name the user input
 
@@ -36,7 +39,7 @@ function showResults (results) {
         $("#nameList").append(listArtists);
 
         
-    }
+    };
 
     $(".artist-list").on('click', function(e) {
 
@@ -44,9 +47,9 @@ function showResults (results) {
 
         showEvents($(this).text());
 
-    }) 
+    }); 
 
-}
+};
 
 function showEvents(artistName) {
 
@@ -61,7 +64,7 @@ function showEvents(artistName) {
         console.log(data);
         $(".list-group").empty();
         displayInfo(data);
-    })
+    });
 };
 
 function displayInfo(artistInfo){
@@ -142,6 +145,10 @@ function listEvents () {
     });
 };
 };
+
+function refresh() {
+    location.reload(true);
+}
 
 
     

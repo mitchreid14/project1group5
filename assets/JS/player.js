@@ -1,8 +1,8 @@
 $(document).ready(function () { // when the html is loaded run the code in document readys function
-    console.log('ready!')
+    console.log('Ready!')
         var APIKey = "AIzaSyAnEMB_xiuY58i6P7sr3zoJygAxoMc5FOg"
 
-    var queryURL = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=2&q=&key=" + APIKey //im going to use this query url to ask the youtube api for a response
+    var queryURL = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=&key=" + APIKey //im going to use this query url to ask the youtube api for a response
 
     //here is where i actually use the query url to ask for a response using ajax
     $.ajax({
@@ -18,7 +18,12 @@ $(document).ready(function () { // when the html is loaded run the code in docum
         var youTubeVideoURL = `https://www.youtube.com/embed/${videoId}`
         console.log(youTubeVideoURL)
 
-        $("#display-div").html(`<a href=${youTubeVideoURL}> Youtube Link Generated form API</a>`);
+        function videosearch (key, search, maxResults);
+        $.get("https://www.googleapis.com/youtube/v3/search?key=" + key + "&type=video&part=snippet&maxResults=" + maxResults + "&q=" + search,function(data){
+            console.log(data)
+        })
+
+        // $("#video").html(`<a href=${youTubeVideoURL}> Youtube Link Generated form API</a>`);
         
         $("#ytframe").attr("src", youTubeVideoURL);
 

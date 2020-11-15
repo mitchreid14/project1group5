@@ -125,19 +125,17 @@ function listEvents () {
 
     for ( i = 0; i < events.length; i++) {
 
-        var listVenues = $('<a href="#" class="list-group-item list-group-item-action" id="links">');
+        var listVenues = $('<a href="#" class="list-group-item list-group-item-action" id="links'+i+'" >');
 
         listVenues.text(events[i].venue.location + ":    " + events[i].datetime.substring(0,10));
 
-        console.log(listVenues);
-
         var eventURL = events[i].url;
 
-        $("#links").attr("src", eventURL);
+        $("#links"+i).attr("src", eventURL);
         
         $("#locationList").append(listVenues);
 
-        $("#locationList").on('click', function(){
+        $("#links"+i).click(function(){
             window.open(eventURL);
          }); 
             
@@ -146,9 +144,6 @@ function listEvents () {
 };
 };
 
-function refresh() {
-    location.reload(true);
-}
 
 
     

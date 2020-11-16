@@ -1,7 +1,6 @@
 //variables
 
 //search artist by name
-
 $("#searchBtn").on("click", function (event) {
 
     $("#goBackBtn").show();
@@ -10,6 +9,7 @@ $("#searchBtn").on("click", function (event) {
 
     var artistName = $("#searchArtistName").val().trim();
 
+    //lastfm
     var queryURL = "http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=" + artistName + "&api_key=65ef463da86ddbf2f244742a378779b4&format=json";
 
     $.ajax({
@@ -22,7 +22,6 @@ $("#searchBtn").on("click", function (event) {
 });
 
 //function showReuslts to list out the suggested results for the name the user input
-
 function showResults(results) {
 
     var searchedArtists = results.results.artistmatches.artist;
@@ -41,6 +40,7 @@ function showResults(results) {
 
     };
 
+    //for the artist that was clicked on, run showEvents function for the name that was clicked on
     $(".artist-list").on('click', function (e) {
 
         event.preventDefault();
@@ -51,6 +51,7 @@ function showResults(results) {
 
 };
 
+//this function queries bandsintown api to retrieve more information about the artist
 function showEvents(artistName) {
 
     var queryURL2 = "https://rest.bandsintown.com/v4/artists/" + artistName + "/?app_id=f7b296adcd087f892a1993c5ddba60ef";
@@ -67,6 +68,7 @@ function showEvents(artistName) {
     });
 };
 
+//passed the data through this function to retrieve artist name and image
 function displayInfo(artistInfo) {
 
     $(".container").slideUp();
@@ -90,7 +92,7 @@ function displayInfo(artistInfo) {
 
     $("#picture").append(image);
 
-    //upcoming events
+    //if else statement to see whether there are any upcoming events for the artist
 
     var eventCount = artistInfo.upcoming_event_count;
 
@@ -101,7 +103,7 @@ function displayInfo(artistInfo) {
 
         $("#info").append(h3El);
 
-    } else {
+    } else { //if not, then run listEvents function with the artist's name retrieved from the last ajax call
 
         var h3El = $('<h3>');
 
@@ -113,6 +115,7 @@ function displayInfo(artistInfo) {
 
     };
 
+    //this function queries the bandsintown api for events
     function listEvents() {
 
         var queryURL3 = "https://rest.bandsintown.com/v4/artists/" + artistHeading + "/events/?app_id=f7b296adcd087f892a1993c5ddba60ef";
@@ -121,8 +124,8 @@ function displayInfo(artistInfo) {
             url: queryURL3,
             method: "GET"
         }).then(function (events) {
-            console.log(events);
 
+            //this for loop prints out the event location and date with a link to purchase the tickets from bandsintown.com
             for (i = 0; i < events.length; i++) {
 
                 var listVenues = $('<a target= "_blank" href="'+events[i].url+'" class="list-group-item list-group-item-action" id="links' + i + '">');
@@ -130,7 +133,6 @@ function displayInfo(artistInfo) {
                 listVenues.text(events[i].venue.location + ":    " + events[i].datetime.substring(0, 10));
 
                 $("#locationList").append(listVenues);
-
 
             }
         });

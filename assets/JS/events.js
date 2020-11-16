@@ -97,17 +97,17 @@ function displayInfo(artistInfo) {
     if (eventCount === 0) {
         var h3El = $('<h3>');
 
-        h3El.text("Upcoming Events: ");
+        h3El.text("No Upcoming Events!");
 
         $("#info").append(h3El);
 
-        var h5El = $('<h5>');
-
-        h5El.text("Sorry! No upcoming events!");
-
-        $("#info").append(h5El);
-
     } else {
+
+        var h3El = $('<h3>');
+
+        h3El.text("Upcoming Events: ");
+
+        $("#info").append(h3El);
 
         listEvents(artistHeading);
 
@@ -130,6 +130,7 @@ function displayInfo(artistInfo) {
                 listVenues.text(events[i].venue.location + ":    " + events[i].datetime.substring(0, 10));
 
                 $("#locationList").append(listVenues);
+
 
             }
         });

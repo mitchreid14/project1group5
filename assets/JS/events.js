@@ -125,19 +125,27 @@ function listEvents () {
 
     for ( i = 0; i < events.length; i++) {
 
-        var listVenues = $('<a href="#" class="list-group-item list-group-item-action" id="links'+i+'" >');
+        var listVenues = $('<a href="#" class="list-group-item list-group-item-action" id="links'+i+'" onclick="url(this)">');
 
         listVenues.text(events[i].venue.location + ":    " + events[i].datetime.substring(0,10));
 
-        var eventURL = events[i].url;
+        //var eventURL = events[i].url;
 
-        $("#links"+i).attr("src", eventURL);
+        $("#links"+i).attr("src", events[i].url);
         
         $("#locationList").append(listVenues);
 
-        $("#links"+i).click(function(){
-            window.open(eventURL);
-         }); 
+        function url(src) {
+
+            $(this).src.val();
+
+        }
+
+
+        // $("#links"+i).click(function(){
+        //     window.open(events[i].url);
+
+        //  }); 
             
         }
     });

@@ -7,8 +7,25 @@
     margin-right: 5%;
 }
 
+.jumbotron {
+    background-color: lightseagreen;
+    border: 8px;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: aquamarine;
+    text-decoration: underline;
+    text-decoration-color: darkslategray;
+    color: darkslategray;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
 body {
     background-image: url(https://c.wallhere.com/photos/b5/e1/1920x1200_px_abstract_Andy_Gilmore_circle_geometry_Graphic_Design_pattern-777832.jpg!d);
+}
+
+.navbar-nav {
+    margin-top: 0;
 }
 
 #searchBtn {

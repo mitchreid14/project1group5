@@ -29,7 +29,8 @@ body {
 }
 
 .form-width {
-    width: 500px;
+    width: 750px;
+    max-width: 750px;
     margin-left: 575px;
 }
 

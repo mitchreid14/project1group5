@@ -2,7 +2,7 @@
 
 //search artist by name
 
-$("#searchBtn").on("click", function(event) {
+$("#searchBtn").on("click", function (event) {
 
     $("#goBackBtn").show();
 
@@ -23,31 +23,31 @@ $("#searchBtn").on("click", function(event) {
 
 //function showReuslts to list out the suggested results for the name the user input
 
-function showResults (results) {
+function showResults(results) {
 
     var searchedArtists = results.results.artistmatches.artist;
 
     console.log(searchedArtists);
 
-    for ( i = 0; i < 10; i++) {
+    for (i = 0; i < 10; i++) {
 
         var listArtists = $('<li class="artist-list list-group-item">');
-        
+
         listArtists.text(searchedArtists[i].name);
-        
-        
+
+
         $("#nameList").append(listArtists);
 
-        
+
     };
 
-    $(".artist-list").on('click', function(e) {
+    $(".artist-list").on('click', function (e) {
 
         event.preventDefault();
 
         showEvents($(this).text());
 
-    }); 
+    });
 
 };
 
@@ -60,14 +60,14 @@ function showEvents(artistName) {
     $.ajax({
         url: queryURL2,
         method: "GET"
-    }).then(function(data) {
+    }).then(function (data) {
         console.log(data);
         $(".list-group").empty();
         displayInfo(data);
     });
 };
 
-function displayInfo(artistInfo){
+function displayInfo(artistInfo) {
 
     $(".container").slideUp();
 
@@ -77,7 +77,7 @@ function displayInfo(artistInfo){
     var name = $('<h1>');
 
     name.text(artistHeading);
-    
+
     $("#name").append(name);
 
     //adding image to page
@@ -85,7 +85,7 @@ function displayInfo(artistInfo){
     var artistImgURL = artistInfo.image_url;
 
     var image = $('<img src="" class="img-fluid" alt="Responsive image">')
-    
+
     image.attr("src", artistImgURL);
 
     $("#picture").append(image);
@@ -110,49 +110,42 @@ function displayInfo(artistInfo){
     } else {
 
         listEvents(artistHeading);
-        
-};
 
-function listEvents () {
-        
-    var queryURL3 = "https://rest.bandsintown.com/v4/artists/" + artistHeading + "/events/?app_id=f7b296adcd087f892a1993c5ddba60ef";
-    
-    $.ajax({
-        url: queryURL3,
-        method: "GET"
-    }).then(function(events) {
-    console.log(events); 
+    };
 
-    for ( i = 0; i < events.length; i++) {
+    function listEvents() {
 
-        var listVenues = $('<a href="#" class="list-group-item list-group-item-action" id="links">');
+        var queryURL3 = "https://rest.bandsintown.com/v4/artists/" + artistHeading + "/events/?app_id=f7b296adcd087f892a1993c5ddba60ef";
 
-        listVenues.text(events[i].venue.location + ":    " + events[i].datetime.substring(0,10));
+        $.ajax({
+            url: queryURL3,
+            method: "GET"
+        }).then(function (events) {
+            console.log(events);
 
-        console.log(listVenues);
+            for (i = 0; i < events.length; i++) {
 
-        var eventURL = events[i].url;
+                var listVenues = $('<a href="#" class="list-group-item list-group-item-action" id="links">');
 
-        $("#links").attr("src", eventURL);
-        
-        $("#locationList").append(listVenues);
+                listVenues.text(events[i].venue.location + ":    " + events[i].datetime.substring(0, 10));
 
-        $("#locationList").on('click', function(){
-            window.open(eventURL);
-         }); 
-            
-        }
-    });
-};
+                console.log(listVenues);
+
+                var eventURL = events[i].url;
+
+                $("#links").attr("src", eventURL);
+
+                $("#locationList").append(listVenues);
+
+                $("#locationList").on('click', function () {
+                    window.open(eventURL);
+                });
+
+            }
+        });
+    };
 };
 
 function refresh() {
     location.reload(true);
 }
-
-
-    
-
-    
-
-

@@ -138,11 +138,3 @@ function displayInfo(artistInfo) {
         });
     };
 };
-
-
-
-
-
-
-
-

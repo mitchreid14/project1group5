@@ -1,4 +1,3 @@
-
 .jumbotron {
     background-color: lightseagreen;
     border: 8px;
@@ -14,31 +13,4 @@
 
 body {
     background-image: url(https://c.wallhere.com/photos/b5/e1/1920x1200_px_abstract_Andy_Gilmore_circle_geometry_Graphic_Design_pattern-777832.jpg!d);
-}
-
-#searchBtn {
-    background-color: teal;
-    color: white;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
-}
-
-.form-control {
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
-}
-
-.form-width {
-    width: 500px;
-    margin-left: 575px;
-}
-
-#nameList {
-    text-decoration: underline;
-    text-decoration-color: powderblue;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bolder;
-    color: darkcyan;
-    background-color: black;
-    text-align: center;
 }

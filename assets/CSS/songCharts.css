@@ -25,11 +25,11 @@ body {
     margin-left: 575px;
 }
 
-#result {
-    border-width: 8px;
-    border-radius: 8px;
-    border-style: solid;
-    border-color: darkcyan;
+#nameList {
+    /* border-width: 8px; */
+    /* border-radius: 8px; */
+    /* border-style: solid; */
+    /* border-color: darkcyan; */
     text-decoration: underline;
     text-decoration-color: powderblue;
     font-family: Verdana, Geneva, Tahoma, sans-serif;

@@ -17,6 +17,7 @@ Song Charts Page
 * Added a search button and input field
 * Changed the background to match the other pages
 * Added a working API to show the artist's top songs when inputed
+* Appended the response to a p tag
 
 Lyrics Page
 * Created search fields for artist name and song title

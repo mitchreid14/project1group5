@@ -1,6 +1,4 @@
 var artist;
-// var query = "https://genius.p.rapidapi.com/search?q=" + artist;
-// console.log(query);
 
 function searchArtist() {
     artist = $("#searchArtist").val();
@@ -17,20 +15,17 @@ function searchArtist() {
     };
     
     $.ajax(settings).done(function (response) {
+        $("#nameList").empty();
         console.log(response);
     for (var i=0; i < response.response.hits.length; i++) {
         console.log(response.response.hits[i].result.title);
         var listSongs = $('<li class="songs-list list-group-item">');
         listSongs.text(response.response.hits[i].result.title);
         $("#nameList").append(listSongs);
-
-        // $("p").append(response.response.hits).append(response.response.hits[i].result.title);
-        // create new element (p tag) and then append the response to p tag then append the p tag to tittles
-        // $("#titles").append(response.response.hits[i].result.title);
     }
     });
 }
 
-$("#searchBtn").on("click", searchArtist);
+$("#searchBtn").on("click", searchArtist); 
 
 
